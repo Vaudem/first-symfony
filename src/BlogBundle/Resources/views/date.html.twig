@@ -1,0 +1,7 @@
+<p>
+    {% if displayTime is defined and displayTime %}
+        {{ "now"|date("d-m-Y h:m:s") }}
+    {% else %}
+        {{ "now"|date("d-m-Y") }}
+    {% endif %}
+</p>

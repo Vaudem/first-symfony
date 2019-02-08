@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+{# :: =>  pasdebundle:pasderessource #}
+
+{% block title %}
+    Bonjour {{ name }}
+{% endblock %}
+
+
+{% block body %}
+<h1>Hello {{ name }}!</h1>
+
+{{ include( 'BlogBundle::date.html.twig' ) }}
+
+<img src="{{ asset( 'bundles/blog/images/spaceman.jpg' ) }}" />
+
+
+
+{% if age >=18 %}
+majeur
+{% else %}
+mineur
+{% endif %}
+
+{% for i in 9..15 %}
+    <p>{{ i }}</p>
+{% endfor %}
+
+<ul>
+    {% for key,elem in tableau %}
+        <li>{{ key }} : {{ elem }}
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+
+{# 
+{{ "test"|length }} /
+{{ [ 1 , 2 , 3 , 4 , 5 ]|length }} /
+{{ 12.9|round}} / 
+{{ "2016-05-12 05:03:32"|date ( 'd-m-Y h:m:s ' ) }} /
+{{ [ 1 , 2 , 3 ]|join(', ')}} /
+{{ "LOWER"|lower}} / {{ "upper"|upper }} / {{ "title title"|title }} / {{ "capitalize capi"|capitalize }}  
+
+ #}
+
+
+

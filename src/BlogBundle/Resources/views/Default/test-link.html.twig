@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{{ include( 'BlogBundle::date.html.twig', { displayTime: true } ) }}
+
+<a href="{{ url( 'index', { name: 'ah', age: 42 } ) }}">link</a> 
+
+
+{% endblock %}

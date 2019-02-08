@@ -1,0 +1,6 @@
+<nav class="menu">
+    <ul>
+        <li><a {% if activeRoute == 'index' %} class="active" {% endif %} href="{{ url( 'index', { name: 'vani', age: 30 } ) }}">Accueil</a></li>
+        <li><a {% if activeRoute == 'test-link' %} class="active" {% endif %} href="{{ url( 'test-link' ) }}">LinkTest</a></li>
+    </ul>
+</nav>

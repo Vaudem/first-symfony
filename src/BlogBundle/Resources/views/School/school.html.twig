@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <h2>School</h2>
+
+    {% for teacher in teachers %}
+    <h3>Prof: {{ teacher.name }}</h3>
+
+    <ul> 
+    {% for student in teacher.students %}
+        <li>Elève: {{ student.name }}
+
+        </li>
+    {% endfor %}
+    </ul>
+    {% endfor %}
+{% endblock %}

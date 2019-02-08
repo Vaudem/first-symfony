@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    color: crimson;
+    text-decoration: none;
+}
+
+
+.menu ul {
+    background: pink;
+    list-style-type: none;
+    line-height: 2em;
+    height: 2em;
+    width: 100%;
+}
+
+.menu li {
+    float: left;
+    margin-left: 2em;
+}
+
+.menu .active{
+    color: crimson;
+    text-decoration: underline;
+}

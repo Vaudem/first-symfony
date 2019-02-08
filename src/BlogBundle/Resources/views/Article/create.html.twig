@@ -1,0 +1,33 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}BlogBundle:Article:create{% endblock %}
+
+{% block body %}
+Article créé !
+
+
+{{ form_start( form ) }}
+<div>
+    {{ form_label( form.title) }}
+    {{ form_widget( form.title) }}
+    {{ form_errors( form.title) }}
+</div>
+<div>
+    {{ form_label( form.content) }}
+    {{ form_widget( form.content) }}
+    {{ form_errors( form.content) }}
+</div>
+    {{ form_widget( form.save) }}
+
+
+
+
+{# {{ form_row( form.content ) }}
+{{ form_row( form.title ) }}
+{{ form_row( form.save ) }} #}
+
+{# {{ form_widget( form ) }} #}
+{{ form_end( form ) }}
+
+
+{% endblock %}

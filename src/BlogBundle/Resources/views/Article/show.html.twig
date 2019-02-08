@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+<div>
+
+    <h2>{{ article.title }}</h2>
+    <p>
+        {{ article.content }}
+    </p>
+
+    <div>
+    {{ form_start( form ) }}
+    {{ form_widget( form ) }}
+    </div>
+    <ul>
+        {% for comment in article.comments %}
+            <li>
+                {{ comment.content }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
